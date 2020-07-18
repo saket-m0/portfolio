@@ -48,6 +48,7 @@ const navSlide = () => {
 navSlide();
 
 const navExplore = () => {
+    const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-options-container");
     const navOptions = document.querySelectorAll(".nav-option");
 
