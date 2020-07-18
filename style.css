@@ -17,8 +17,8 @@
 }
 
 .nav-container {
-    padding: 15px 0;
     display: flex;
+    padding: 15px 0;
     height: 48px;
     width: 75%;
     justify-content: space-between;
