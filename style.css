@@ -260,12 +260,14 @@
 
 .skill-icon-text-container ul {
     list-style: none;
+    margin: 10px 10px;
 }
 
 .skill-icon-text-container ul li {
-    width: 80%;
-    margin: 25px auto;
+    width: 100%;
     color: white;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
 }
 
 .skill-icon-container img {
@@ -586,6 +588,10 @@
     }
     .skills-row {
         width: 100%;
+    }
+    .skill-icon-text-container ul li {
+        font-size: 0.6rem;
+        padding-bottom: 10px;
     }
     .skill-name-container p {
         font-size: 12px;
