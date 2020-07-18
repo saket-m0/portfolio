@@ -1,0 +1,627 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    padding-top: 10px;
+    width: 100%;
+    justify-content: center;
+    z-index: 10;
+    background-color: none;
+    transition: background-color 0.2s ease-in;
+}
+
+.nav-container {
+    display: flex;
+    height: 48px;
+    width: 75%;
+    justify-content: space-between;
+    margin: auto;
+    color: white;
+    align-items: center;
+}
+
+.nav-title a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-options-container {
+    width: 40%;
+}
+
+.nav-options {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-option {
+    display: inline;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-option a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-scrolled {
+    background-color: #2eacac;
+    box-shadow: -2px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+    position: absolute;
+}
+
+.landing {
+    width: 100%;
+    height: 75vh;
+    background: #2c2c2c url("./assets/background.png") bottom no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.photo-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.avatar {
+    height: 200px;
+    position: absolute;
+    right: -40px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 2.25rem;
+    margin-top: 80px;
+}
+
+.designation {
+    font-size: 1.2rem;
+}
+
+.portfolio {
+    margin-top: 5px;
+}
+
+.collage {
+    margin-top: 25px;
+}
+
+.profiles-container {
+    width: 20rem;
+}
+
+.profiles {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #858585;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+}
+
+.profile-img {
+    height: 25px;
+    color: white;
+    fill: white;
+}
+
+.section {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #2c2c2c;
+    text-align: center;
+}
+
+.experience-content {
+    margin: 25px 0 45px 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    text-align: center;
+}
+
+.about-content {
+    font-size: 1.3rem;
+    color: #858585;
+    width: 55%;
+    text-align: center;
+    margin: auto;
+}
+
+.site-btn {
+    cursor: pointer;
+    margin-top: 25px;
+    width: 300px;
+    height: 50px;
+    background-color: #2eacac;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: -2px 3px 6px #b0b0b0;
+    align-self: center;
+}
+
+.site-btn:active {
+    outline: none;
+}
+.site-btn:focus {
+    outline: none;
+}
+
+.site-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.skills-row {
+    margin: auto;
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill {
+    background-color: white;
+    box-shadow: -2px 3px 6px #b0b0b0;
+    width: 150px;
+    height: 180px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.skill-icon-container {
+    display: flex;
+    align-items: center;
+    grid-row: 1/2;
+    overflow: hidden;
+}
+
+.skill-icon {
+    height: 80px;
+    margin: auto;
+}
+
+.skill-icon-text-container {
+    position: absolute;
+    bottom: -100%;
+    background-color: #2c2c2c;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.skill:hover .skill-icon-text-container {
+    opacity: 0.9;
+    bottom: 0;
+}
+
+.skill:hover {
+    top: -4px;
+    box-shadow: -2px 5px 15px #a9a9a9;
+}
+
+.skill-icon-text-container ul {
+    list-style: none;
+}
+
+.skill-icon-text-container ul li {
+    width: 80%;
+    margin: 25px auto;
+    color: white;
+}
+
+.skill-icon-container img {
+    margin: auto;
+    height: 80%;
+}
+
+.skill-name-container {
+    z-index: 1;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-name-container p {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.projects-btn-container {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-btn {
+    cursor: pointer;
+    margin: 25px 0 25px 0;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    color: #2c2c2c;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: -2px 3px 6px #b0b0b0;
+    align-self: center;
+}
+
+.project-btn:active {
+    outline: none;
+}
+
+.active {
+    background-color: #2eacac;
+    color: white;
+    box-shadow: none;
+}
+
+.active:focus {
+    outline: none;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project {
+    width: 50%;
+    background-color: #2c2c2c;
+    color: white;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    border-radius: 15px;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.project-content {
+    margin: auto;
+    width: 80%;
+}
+
+.project-github-btn {
+    cursor: pointer;
+    margin: 25px auto;
+    width: 40%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    align-self: center;
+    background-color: #2eacac;
+    box-shadow: none;
+    align-items: center;
+}
+
+.project-github-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+#contact {
+    background-color: #2c2c2c;
+}
+
+.contact-title {
+    color: white;
+}
+
+.contact-container {
+    padding-top: 35px;
+    margin: auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-container p {
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.contact-details-container {
+    width: 50%;
+}
+
+.contact-name {
+    font-weight: 700;
+    font-size: 2rem;
+    padding-bottom: 25px;
+}
+
+.contact-designation {
+    font-size: 1.25rem;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-detail {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.phone-icon {
+    fill: white;
+    height: 1rem;
+    margin-right: 10px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon {
+    fill: white;
+    height: 25px;
+    width: auto;
+    margin: 25px 15px 25px 15px;
+}
+
+.contact-form-container {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 80%;
+}
+
+.contact-form-title {
+    font-size: 1.5rem;
+}
+
+#contact-form {
+    margin-top: 25px;
+}
+
+.form-section {
+    width: 100%;
+    height: 50px;
+    font-size: 1.25rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.form-section input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    border-bottom: 1px solid white;
+    outline: none;
+    resize: none;
+}
+
+.form-section input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.form-section label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.form-section label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2eacac;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.label-name-text {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.form-section input:focus + .label-name .label-name-text,
+.form-section input:valid + .label-name .label-name-text {
+    transform: translateY(-150%);
+    font-size: 0.9rem;
+    color: #2eacac;
+}
+
+.form-section input:focus + .label-name::after,
+.form-section input:valid + .label-name::after {
+    transform: translateX(0);
+}
+
+.form-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-btn {
+    cursor: pointer;
+    margin: 25px auto;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    color: #2c2c2c;
+    font-weight: bold;
+    font-size: 1.5rem;
+    align-self: center;
+    outline: none;
+}
+
+.success {
+    background-color: #2eacac;
+    color: white;
+}
+
+.success::after {
+    content: "ted";
+}
+
+.failure {
+    background-color: #ff6347;
+}
+
+@media (max-width: 960px) {
+    .landing {
+        height: 80vh;
+    }
+    .nav-container {
+        width: 90%;
+    }
+    .nav-options {
+        display: none;
+    }
+    .profiles-container {
+        width: 15rem;
+    }
+    .about-content {
+        width: 80%;
+    }
+    .skill {
+        width: 80px;
+        height: 120px;
+    }
+    .skill-icon {
+        height: 50px;
+    }
+    .skills-row {
+        width: 100%;
+    }
+    .skill-name-container p {
+        font-size: 12px;
+    }
+
+    .projects-btn-container {
+        width: 100%;
+    }
+    .project-btn {
+        width: 120px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .project {
+        width: 80%;
+    }
+    .project-github-btn {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details-container {
+        width: 100%;
+    }
+    #dept {
+        display: none;
+    }
+    .contact-form-title {
+        margin-top: 50px;
+    }
+    .contact-form-container {
+        width: 100%;
+    }
+}
