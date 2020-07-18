@@ -17,7 +17,7 @@
 
 .nav-container {
     display: flex;
-    height: 48px;
+    height: 9vh;
     width: 75%;
     justify-content: space-between;
     margin: auto;
@@ -53,6 +53,20 @@
 .nav-option a {
     text-decoration: none;
     color: white;
+}
+
+.nav-option-underline {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: translateY(15px);
+    opacity: 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-option:hover .nav-option-underline {
+    transform: translateY(5px);
+    opacity: 1;
 }
 
 .nav-scrolled {
