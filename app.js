@@ -1,5 +1,5 @@
 const navbar = document.querySelector("nav");
-const landing = document.querySelector(".landing");
+const name = document.querySelector(".name");
 
 const scriptURL =
     "https://script.google.com/macros/s/AKfycbzW8bOKun8z2dsFfgJzW-FqWrLKh-S_fwA0Xsn0c6Le6uG_PZ-q/exec";
@@ -19,7 +19,7 @@ const landingObserver = new IntersectionObserver((entries, landingObserver) => {
     });
 }, landingOptions);
 
-landingObserver.observe(landing);
+landingObserver.observe(name);
 
 const navSlide = () => {
     const burger = document.querySelector(".burger");
