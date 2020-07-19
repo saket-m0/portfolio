@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 
-body{
+body {
     overflow-y: hidden;
 }
 
@@ -837,6 +837,9 @@ body{
 }
 
 @media (max-width: 960px) {
+    .circle-container {
+        width: 60%;
+    }
     .landing {
         height: 80vh;
     }
@@ -873,6 +876,9 @@ body{
     }
     .nav-option {
         opacity: 0;
+    }
+    .portfolio{
+        font-size: 1rem;
     }
     .profiles-container {
         width: 15rem;
