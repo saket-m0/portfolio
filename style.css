@@ -122,7 +122,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: cover;
     z-index: 5;
 }
 
@@ -739,6 +738,7 @@
     }
     .parallax-window {
         height: 80vh;
+        background-attachment: fixed;
     }
     .nav-container {
         width: 90%;
