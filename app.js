@@ -1,6 +1,8 @@
 const navbar = document.querySelector("nav");
 const name = document.querySelector(".name");
 
+const controller = new ScrollMagic.Controller();
+
 const scriptURL =
     "https://script.google.com/macros/s/AKfycbzW8bOKun8z2dsFfgJzW-FqWrLKh-S_fwA0Xsn0c6Le6uG_PZ-q/exec";
 const form = document.forms["submit-to-google-sheet"];
@@ -18,8 +20,6 @@ const landingObserver = new IntersectionObserver((entries, landingObserver) => {
         }
     });
 }, landingOptions);
-
-landingObserver.observe(name);
 
 const navSlide = () => {
     const burger = document.querySelector(".burger");
@@ -45,8 +45,6 @@ const navSlide = () => {
     });
 };
 
-navSlide();
-
 const navExplore = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-options-container");
@@ -62,8 +60,6 @@ const navExplore = () => {
         });
     });
 };
-
-navExplore();
 
 function openProject(projectName, projectBtnName) {
     var i;
@@ -91,3 +87,37 @@ form.addEventListener("submit", (e) => {
             document.getElementById("submit-btn").classList.add("failure")
         );
 });
+
+const section = document.querySelectorAll(".section");
+
+function animateSections() {
+    section.forEach((section) => {
+        const sceneTl = new TimelineLite();
+        sceneTl.fromTo(
+            `#${section.id}`,
+            1,
+            { opacity: 0, y: "20" },
+            {
+                opacity: "1",
+                y: 0,
+                ease: Power2.easeOut,
+            }
+        );
+
+        const scene = new ScrollMagic.Scene({
+            triggerElement: `#${section.id}`,
+            triggerHook: "0.8",
+        })
+            .setTween(sceneTl)
+            .addTo(controller);
+    });
+}
+
+function app() {
+    navExplore();
+    navSlide();
+    landingObserver.observe(name);
+    animateSections();
+}
+
+app();
