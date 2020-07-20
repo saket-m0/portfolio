@@ -143,10 +143,50 @@ body {
     box-shadow: -2px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.burger {
+.bottom-nav {
     display: none;
-    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #2eacac;
     z-index: 2;
+}
+
+.bottom-nav-container {
+    height: 100%;
+}
+
+.bottom-nav-container ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bottom-nav-container li {
+    height: 100%;
+}
+
+.bottom-nav-icon-container {
+    text-decoration: none;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-nav-icon-container svg {
+    fill: white;
+    height: 20px;
+}
+
+.bottom-nav-icon-container span {
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    padding-top: 5px;
 }
 
 .nav-active {
@@ -195,6 +235,7 @@ body {
     left: 0;
     top: 0;
     background: transparent;
+    background-position: bottom;
 }
 
 .landing-container {
@@ -840,8 +881,22 @@ body {
     .circle-container {
         width: 60%;
     }
+
+    .navbar {
+        position: absolute;
+    }
     .landing {
-        height: 80vh;
+        height: 70vh;
+        margin-bottom: 30px;
+    }
+    .parallax-window {
+        height: 70vh !important;
+    }
+    .landing-container {
+        margin-top: 80px;
+    }
+    .name {
+        margin-top: 40px;
     }
     .parallax-window {
         height: 80vh;
@@ -850,38 +905,23 @@ body {
     .nav-container {
         width: 90%;
     }
-    .burger {
+    .bottom-nav {
         display: block;
     }
-
-    .nav-options-container {
-        position: absolute;
-        right: 0;
-        align-self: flex-start;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #2eacac;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
     .nav-options {
-        height: 50vh;
-        background-color: #2eacac;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
+        display: none;
     }
     .nav-option {
         opacity: 0;
     }
-    .portfolio{
+    .portfolio {
         font-size: 1rem;
     }
     .profiles-container {
         width: 15rem;
+    }
+    .section {
+        padding-top: 30px;
     }
     .about-content {
         width: 80%;

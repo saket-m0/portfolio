@@ -32,47 +32,6 @@ const landingObserver = new IntersectionObserver((entries, landingObserver) => {
     });
 }, landingOptions);
 
-const navSlide = () => {
-    //Toggle Nav
-    burger.addEventListener("click", () => {
-        nav.classList.toggle("nav-active");
-
-        //Animate Links
-        navOptions.forEach((option, index) => {
-            if (option.style.animation) {
-                option.style.animation = "";
-            } else {
-                option.style.animation = `navOptionFade 0.5s ease forwards ${
-                    index / 7 + 0.5
-                }s`;
-            }
-        });
-
-        //Burger Animation
-        burger.classList.toggle("toggle");
-    });
-};
-
-const navTitleClick = () => {
-    navTitle.addEventListener("click", () => {
-        if (nav.classList.contains("nav-active")) {
-            burger.click();
-        }
-    });
-};
-
-const navExplore = () => {
-    navOptions.forEach((option) => {
-        option.addEventListener("click", () => {
-            nav.classList.toggle("nav-active");
-            navOptions.forEach((option) => {
-                option.style.animation = "";
-            });
-            burger.classList.toggle("toggle");
-        });
-    });
-};
-
 const openProject = (projectName, projectBtnName) => {
     var i;
     var x = document.getElementsByClassName("project");
@@ -124,11 +83,8 @@ const animateSections = () => {
 };
 
 const app = () => {
-    navExplore();
-    navSlide();
     landingObserver.observe(name);
     animateSections();
-    navTitleClick();
 };
 
 app();
