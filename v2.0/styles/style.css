@@ -230,17 +230,18 @@ header .profiles-container .profile img {
   }
 }
 
-section .about-content {
+.section-content .about-info {
   display: flex;
 }
 
-section .about-content .content-design {
+.section-content .about-info .content-design {
   width: 5px;
   height: 120px;
   background-color: #e7371f;
+  z-index: 5;
 }
 
-section .about-content p {
+.section-content .about-info p {
   margin-left: 20px;
   width: 90%;
   font-size: 1.3rem;
@@ -250,9 +251,24 @@ section .about-content p {
 }
 
 @media (max-width: 996px) {
-  section .about-content p {
+  .section-content .about-info p {
     font-size: 0.8rem;
   }
+}
+
+.section-content button {
+  width: 15rem;
+  height: 3.5rem;
+  background-color: #e7371f;
+  border: none;
+  border-radius: 0;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.section-content button a {
+  font-size: 2.25rem;
 }
 
 * {
@@ -261,6 +277,10 @@ section .about-content p {
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -273,12 +293,16 @@ ul {
 }
 
 section {
+  position: relative;
+}
+
+.section-content {
   padding-top: 3rem;
   width: 70%;
   margin: auto;
 }
 
-section h1 {
+.section-content h1 {
   color: #e7371f;
   font-weight: bold;
   font-size: 4rem;
@@ -286,8 +310,37 @@ section h1 {
 }
 
 @media (max-width: 996px) {
-  section h1 {
+  .section-content h1 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .section-content {
+    padding-top: 1rem;
+  }
+}
+
+.section-design {
+  overflow-x: hidden;
+  width: 150%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  color: #e7371f;
+  font-weight: bold;
+  opacity: 0.1;
+  font-size: 25rem;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 996px) {
+  .section-design {
+    top: 8rem;
+    width: 150%;
+    font-size: 6rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

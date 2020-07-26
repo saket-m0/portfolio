@@ -11,6 +11,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: color(white);
@@ -21,6 +25,10 @@ ul {
 }
 
 section {
+    position: relative;
+}
+
+.section-content {
     padding-top: 3rem;
     width: 70%;
     margin: auto;
@@ -34,5 +42,30 @@ section {
         @include mobile {
             font-size: 3rem;
         }
+    }
+
+    @include mobile {
+        padding-top: 1rem;
+    }
+}
+
+.section-design {
+    overflow-x: hidden;
+    width: 150%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    color: color(primary);
+    font-weight: bold;
+    opacity: 0.1;
+    font-size: 25rem;
+    text-align: center;
+    transform: translateX(-50%);
+
+    @include mobile {
+        top: 8rem;
+        width: 150%;
+        font-size: 6rem;
     }
 }
