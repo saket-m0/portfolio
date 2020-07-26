@@ -1,0 +1,19 @@
+$colors: (
+    primary: #e7371f,
+    secondary: #2c2c2c,
+    background: #161616,
+    white: #ffffff,
+    grey: #858585,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$mobile: 996px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
