@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./nav";
 @import "./header";
+@import "./about";
 
 * {
     padding: 0;
@@ -17,4 +18,21 @@ a {
 
 ul {
     list-style: none;
+}
+
+section {
+    padding-top: 3rem;
+    width: 70%;
+    margin: auto;
+
+    h1 {
+        color: color(primary);
+        font-weight: bold;
+        font-size: 4rem;
+        padding: 2rem 0;
+
+        @include mobile {
+            font-size: 3rem;
+        }
+    }
 }
