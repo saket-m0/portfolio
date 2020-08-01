@@ -290,7 +290,7 @@ ul {
 
 section {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .section-content {
