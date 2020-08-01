@@ -279,10 +279,6 @@ header .profiles-container .profile img {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 a {
   text-decoration: none;
   color: #ffffff;
@@ -294,6 +290,7 @@ ul {
 
 section {
   position: relative;
+  overflow-x: hidden;
 }
 
 .section-content {
